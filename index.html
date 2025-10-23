@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kalkulator Pintar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="laser-bg"></canvas>
+
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">🔮</div>
+        <div>
+          <h1>Kalkulator Pintar</h1>
+          <p>Rangkaian rumus & custom formula — simpel, cepat, profesional</p>
+        </div>
+      </div>
+      <div class="mode">Web • Modern • EU Style</div>
+    </header>
+
+    <main class="main">
+      <section class="left">
+        <div class="card">
+          <h2>Rumus Cepat</h2>
+          <div class="grid">
+            <button data-cmd="area_rect">Luas Persegi Panjang</button>
+            <button data-cmd="area_circle">Luas Lingkaran</button>
+            <button data-cmd="perim_rect">Keliling Persegi Panjang</button>
+            <button data-cmd="quad">Rumus Kuadrat (ax²+bx+c=0)</button>
+            <button data-cmd="bmi">BMI</button>
+            <button data-cmd="ohm">Hukum Ohm (V=I*R)</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Custom Formula</h2>
+          <p class="muted">Tulis rumus pakai variabel (contoh: <code>(m*v^2)/2</code> atau <code>(a*b)/(c+d)</code>). Gunakan ^ untuk pangkat.</p>
+          <input id="customExpr" placeholder="Masukkan rumus, mis. (m*v^2)/2" />
+          <textarea id="customVars" placeholder="Masukkan variabel sebagai 'nama=nilai' tiap baris, mis:
+m=2
+v=3"></textarea>
+          <div class="row">
+            <button id="evalCustom">Hitung Rumus</button>
+            <button id="clearCustom" class="ghost">Bersihkan</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="right">
+        <div class="card">
+          <h2>Hasil</h2>
+          <div id="result" class="result">Belum ada perhitungan.</div>
+          <div id="history" class="history"></div>
+        </div>
+
+        <div class="card">
+          <h2>Detil Rumus Terpilih</h2>
+          <div id="formArea"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bottom">
+      <div>Siap dipublish di GitHub Pages • Ikuti panduan langkah demi langkah di bawah</div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
